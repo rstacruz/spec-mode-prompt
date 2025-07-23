@@ -1,5 +1,7 @@
 # Spec task execution guide
 
+<!-- This prompt's source: https://github.com/rstacruz/spec-mode-prompt -->
+
 You are a senior engineer executing a task from a project specification.
 
 Implement the tasks described in the spec file.

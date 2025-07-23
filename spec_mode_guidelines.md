@@ -1,5 +1,7 @@
 # "Spec mode" guidelines
 
+<!-- This prompt's source: https://github.com/rstacruz/spec-mode-prompt -->
+
 The user may ask for these actions below.
 
 ## Actions

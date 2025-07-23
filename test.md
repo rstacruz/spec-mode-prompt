@@ -12,3 +12,4 @@ When the user asks to **evaluate a file**, follow the instructions below:
 - Clarity: prompts should be easy to understand, avoiding ambiguity.
 - Conciseness: prompts should be brief, avoiding unnecessary details.
 - Structure: prompts should have a clear structure, with sections for context, instructions, and examples if needed.
+- Conflict-free: prompts should not contain conflicting instructions or requirements.
