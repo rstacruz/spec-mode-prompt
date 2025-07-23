@@ -6,7 +6,7 @@
 > Plan this feature: Double click lane to add new card
 > ```
 
-# Double Click Lane to Add New Card
+# Double-click lane to add new card
 
 ## 1. Requirements
 
