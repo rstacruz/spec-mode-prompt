@@ -1,10 +1,10 @@
 > [!note]
 >
-> ### About this file
+> **About this file:** This was done for [BaldissaraMatheus/Tasks.md#147](https://github.com/BaldissaraMatheus/Tasks.md/issues/147). The orginal prompt was:
 >
-> This was done for [BaldissaraMatheus/Tasks.md#147](https://github.com/BaldissaraMatheus/Tasks.md/issues/147). The orginal prompt was:
->
-> > Plan this feature: Double click lane to add new card
+> ```
+> Plan this feature: Double click lane to add new card
+> ```
 
 # Double Click Lane to Add New Card
 
