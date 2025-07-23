@@ -101,6 +101,7 @@ Create technical design with:
 - **Overview:** High-level technical approach
 - **Files:** New, modified, removed files. Include reference files for LLM agents
 - **Component graph:** Mermaid diagram with color coding (new=green, changed=yellow, removed=red)
+- **Data models:** Types, interfaces, schemas, and data structures
 - **Components:** Key components with responsibilities and signatures in code blocks
 - **Error handling:** Error management approach
 - **Testing strategy:** Unit, integration, and other tests needed
