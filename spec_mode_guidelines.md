@@ -46,7 +46,7 @@ In step-by-step mode, the remaining sections will be placeholders until the prev
 - YAML front matter with **createdAt:** today's date in ISO8601 format
 - **Title:** (h1) concise title based on the feature name
 
-### 1. Requirements
+### Requirements
 
 Create clear, unambiguous requirements with:
 
@@ -94,7 +94,7 @@ describe("WordLinks", () => {
 });
 ```
 
-### 2. Design
+### Design
 
 Create technical design with:
 
@@ -143,7 +143,7 @@ describe("WordCategory", () => {
 });
 ```
 
-### 3. Tasks
+### Tasks
 
 Create detailed implementation plan with:
 
