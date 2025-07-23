@@ -92,3 +92,7 @@ This should work for most LLM coding agents that support custom prompts:
 Also see:
 
 - [kiro-claude-code (github)](https://github.com/ashi12381/kiro-claude-code)
+
+## Hints
+
+- Use [codebase-analysis](https://github.com/rstacruz/codebase-analysis-prompt) to improve planning. Generate architecture docs then use `See @docs/architecture/` in spec mode.
