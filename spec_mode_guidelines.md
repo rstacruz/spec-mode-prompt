@@ -158,6 +158,7 @@ Guidelines:
 - Reference specific requirements each task fulfills
 - Actionable instructions for developers or AI coders (e.g., "Create the file...", "Add the function...", "Write a test for...")
 - No non-coding tasks like "deploy" or "user testing"
+- Place test tasks immediately after their related implementation tasks, not in separate testing sections
 
 **Example tasks format:**
 
@@ -170,5 +171,7 @@ Guidelines:
 ### 2. Implement state and logic
 
 - [ ] 2.1. **Set up state store:** Create Zustand store in `src/stores/inventoryStore.ts` with `items` array and `addItem` action that throws error when full (fulfills Req 1.1, 1.2)
-- [ ] 2.2. **Connect component to state:** Connect `Inventory` component to render items from store (fulfills Req 1.1)
+- [ ] 2.2. **Test store functionality:** Write test for `addItem` action and full inventory behavior (fulfills Req 1.2)
+- [ ] 2.3. **Connect component to state:** Connect `Inventory` component to render items from store (fulfills Req 1.1)
+- [ ] 2.4. **Test component integration:** Write test that verifies component displays items from store (fulfills Req 1.1)
 ```
