@@ -141,20 +141,22 @@ describe("Lane double-click functionality", () => {
 
 ### 1. Add double-click handler
 
-- [ ] 1.1. **Create handler function:** Add `handleLaneDoubleClick(event, lane)` function in `App.jsx` that checks if target is not a card and calls `createNewCard(lane)` (fulfills Req 1.1)
-- [ ] 1.2. **Add event listener:** Add `onDblClick` prop to `DragAndDrop.Container` with class `lane__content` that calls the handler function (fulfills Req 1.1)
+- [ ] 1.1. **Create handler function:** Add `handleLaneDoubleClick(event, lane)` function in `App.jsx` (fulfills Req 1.1)
+  - Check if target is not a card element
+  - Call existing createNewCard function
+- [ ] 1.2. **Add event listener:** Add `onDblClick` prop to `DragAndDrop.Container` (fulfills Req 1.1)
 - [ ] 1.3. **Test basic functionality:** Write test to verify double-click creates new card in correct lane
-- [ ] 1.4. **Prevent card conflicts:** Add check in handler to return early if `event.target.closest('.card')` exists (fulfills Req 1.2, 1.3)
+- [ ] 1.4. **Prevent card conflicts:** Add check to return early if clicking on existing card (fulfills Req 1.2, 1.3)
 - [ ] 1.5. **Test conflict prevention:** Write test to verify double-click on existing card doesn't create new card
 
 ### 2. Add visual feedback
 
-- [ ] 2.1. **Add hover styles:** Create CSS rule for `.lane__content:empty:hover` and `.lane__content:hover` to show subtle visual hint (fulfills Req 2.1)
-- [ ] 2.2. **Add click feedback:** Create CSS rule for `.lane__content:active` to provide immediate visual feedback (fulfills Req 2.2)
+- [ ] 2.1. **Add hover styles:** Create CSS for `.lane__content:hover` to show subtle visual hint (fulfills Req 2.1)
+- [ ] 2.2. **Add click feedback:** Create CSS for `.lane__content:active` (fulfills Req 2.2)
 - [ ] 2.3. **Test visual feedback:** Write test to verify CSS classes are applied correctly
 
 ### 3. Handle edge cases
 
-- [ ] 3.1. **Respect sort state:** Add check in handler to return early if `disableCardsDrag()` is true (fulfills existing sort behavior)
+- [ ] 3.1. **Respect sort state:** Return early if `disableCardsDrag()` is true (fulfills existing sort behavior)
 - [ ] 3.2. **Test sort state:** Write test to verify double-click doesn't work when sorting is active
 - [ ] 3.3. **Prevent header conflicts:** Ensure double-click on lane header elements doesn't trigger card creation (fulfills Req 1.3)
