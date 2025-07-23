@@ -1,10 +1,14 @@
 # Spec mode prompt
 
-Vibe code without the chaos. Inspired by [Kiro code's spec mode](https://kiro.dev/blog/introducing-kiro/).
+Vibe code without the chaos. Inspired by [Kiro code's spec mode](https://kiro.dev/docs/specs/).
 
-Example outputs:
+### Rationale
 
-- [Example: double-click to add tasks feature](examples/tasks_md_double_click.md)
+The term "vibe coding" feels like it implies a reckless surrender to AI's whimsy. How is an AI supposed to figure out how to do features like "just implement a download button"?
+
+Spec mode is one way to do this. It will ask the agent to do research to plan and design the feature before actually implementing it. Check out these examples:
+
+- [Example spec: double-click to add tasks](examples/tasks_md_double_click.md)
 
 ## Usage
 
@@ -19,10 +23,21 @@ This should work for most LLM coding agents that support custom prompts:
    Read the guidelines in @docs/spec_mode_guidelines.md.
    Plan for this feature:
 
-   <describe your plan here>
+   <describe your feature here>
    ```
 
-3. Task mode: when you're happy with the spec, start a new chat. Use this prompt:
+3. Work with the agent to refine the specs:
+
+   ```sh
+   # Address requirements:
+   "Remove requirement 1.2."
+   "Add a requirement to support dark mode."
+   # Address technical design:
+   "Use Tailwind instead of CSS modules for styling here."
+   "Don't create a separate Message component, just use a div."
+   ```
+
+4. Task mode: when you're happy with the spec, start a new chat and use this prompt:
 
    ```markdown
    Read the guidelines in @docs/task_mode_guidelines.md.
