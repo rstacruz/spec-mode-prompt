@@ -16,11 +16,11 @@ Spec mode is one way to do this. It will ask the agent to do research to plan an
 
 This should work for most LLM coding agents that support custom prompts:
 
-1. Copy [`spec_mode_guidelines.md`](spec_mode_guidelines.md) and [`task_mode_guidelines.md`](task_mode_guidelines.md) into your project's _docs/_ folder.
+1. Copy [`spec_mode_guidelines.md`](spec_mode_guidelines.md) and [`task_mode_guidelines.md`](task_mode_guidelines.md) into your project's _notes/_ folder.
 2. Spec mode: Use your preferred LLM coding agent (Gemini, Claude, Copilot, etc.) to use this prompt:
 
    ```markdown
-   Read the guidelines in @docs/spec_mode_guidelines.md.
+   Read the guidelines in @notes/spec_mode_guidelines.md.
    Plan for this feature:
 
    <describe your feature here>
@@ -40,8 +40,8 @@ This should work for most LLM coding agents that support custom prompts:
 4. Task mode: when you're happy with the spec, start a new chat and use this prompt:
 
    ```markdown
-   Read the guidelines in @docs/task_mode_guidelines.md.
-   Do all the tasks in @docs/specs/my-feature.spec.md.
+   Read the guidelines in @notes/task_mode_guidelines.md.
+   Do all the tasks in @notes/specs/my-feature.spec.md.
    ```
 
 ### OpenCode
@@ -95,4 +95,4 @@ Also see:
 
 ## Hints
 
-- Use [codebase-analysis](https://github.com/rstacruz/codebase-analysis-prompt) to improve planning. Generate architecture docs then use `See @docs/architecture/` in spec mode.
+- Use [codebase-analysis](https://github.com/rstacruz/codebase-analysis-prompt) to improve planning. Generate architecture docs then use `See @notes/architecture/` in spec mode.

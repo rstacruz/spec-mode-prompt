@@ -57,9 +57,6 @@ Enhance the existing lane content area with double-click event handling. Leverag
 **Reference files:**
 
 - `frontend/src/components/lane-name.jsx` - Reference for existing task/note creation button
-- `docs/architecture/frontend-core.md` - Frontend architecture documentation
-- `docs/architecture/ui-components.md` - UI components documentation
-- `docs/architecture/stories.md` - Existing user stories and epics
 
 ### Component graph
 
