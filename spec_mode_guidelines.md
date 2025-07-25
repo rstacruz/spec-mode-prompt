@@ -54,6 +54,7 @@ In step-by-step mode, the remaining sections will be placeholders until the prev
 Create clear, unambiguous requirements with:
 
 - **Introduction:** Brief summary of the feature and purpose
+- **Rationale:** Benefits of the feature, problems it solves, why it's needed
 - **Out of scope:** What this feature will _not_ do
 - **Stories:** User stories with acceptance criteria
   - **User story:** "AS A [role], I WANT [feature], SO THAT [benefit]"
@@ -105,9 +106,12 @@ Create technical design with:
 - **Files:** New, modified, removed files. Include reference files for LLM agents
 - **Component graph:** Mermaid diagram with color coding (new=green, changed=yellow, removed=red)
 - **Data models:** Types, interfaces, schemas, and data structures
+- **CSS classes:** Styling and layout classes needed
 - **Components:** Key components with responsibilities and signatures in code blocks
 - **Error handling:** Error management approach
 - **Testing strategy:** Unit, integration, and other tests needed
+
+Skip sections that don't apply to your feature (e.g., if no data model is needed, skip that section; if no CSS classes are required, skip that section).
 
 **Example component format:**
 
