@@ -1,3 +1,7 @@
+---
+createdAt: 2025-07-25
+---
+
 > [!note]
 >
 > **About this file:** This was done for [BaldissaraMatheus/Tasks.md#147](https://github.com/BaldissaraMatheus/Tasks.md/issues/147). The orginal prompt was:
@@ -14,6 +18,12 @@
 
 Enhance the existing "Create and Organize Tasks/Notes" functionality by adding double-click interaction to lanes for creating new tasks/notes. This provides a more intuitive alternative to the existing "+" button for card creation, building upon the established task management workflow.
 
+### Rationale
+
+- Improves user experience by providing an intuitive interaction pattern familiar from other desktop applications
+- Reduces clicks required for card creation from two (finding and clicking "+" button) to one (double-click)
+- Maintains existing functionality while adding convenience
+
 ### Out of scope
 
 - Customizing double-click timing/sensitivity
@@ -22,20 +32,38 @@ Enhance the existing "Create and Organize Tasks/Notes" functionality by adding d
 
 ### Stories
 
-#### 1. Double-click task/note creation
+#### 1. Double-click to create card
 
 **Story:** AS a user, I WANT to double-click on a lane area, SO THAT I can quickly create a new task/note in that lane.
 
-- 1.1. WHEN the user double-clicks on an empty area within a lane content area, THEN the system SHALL create a new task/note in that lane
-- 1.2. WHEN the user double-clicks on an existing task/note card, THEN the system SHALL open the card for editing (existing behavior)
-- 1.3. WHEN the user double-clicks on lane header elements (name, buttons), THEN the system SHALL NOT create a new task/note
+- **Create card in empty lane**
 
-#### 2. Visual feedback
+  - _WHEN_ the user double-clicks on an empty area within a lane content area,
+  - _THEN_ the system _SHALL_ create a new task/note in that lane.
+
+- **Edit card on double-click**
+
+  - _WHEN_ the user double-clicks on an existing task/note card,
+  - _THEN_ the system _SHALL_ open the card for editing.
+
+- **Ignore header double-click**
+
+  - _WHEN_ the user double-clicks on lane header elements (name, buttons),
+  - _THEN_ the system _SHALL NOT_ create a new task/note.
+
+#### 2. Visual feedback for double-click
 
 **Story:** AS a user, I WANT visual feedback when double-clicking on a lane, SO THAT I understand the interaction is available.
 
-- 2.1. WHEN the user hovers over an empty lane content area, THEN the system SHALL show a subtle visual hint that double-click is available
-- 2.1. WHEN the user double-clicks on lane header elements (name, buttons), THEN the system SHALL NOT create a new task/note
+- **Show double-click hint on hover**
+
+  - _WHEN_ the user hovers over an empty lane content area,
+  - _THEN_ the system _SHALL_ show a subtle visual hint that double-click is available.
+
+- **No card creation on header**
+
+  - _WHEN_ the user double-clicks on lane header elements (name, buttons),
+  - _THEN_ the system _SHALL NOT_ create a new task/note.
 
 ## 2. Design
 
@@ -45,10 +73,6 @@ Enhance the existing lane content area with double-click event handling. Leverag
 
 ### Files
 
-**New files:**
-
-- None
-
 **Modified files:**
 
 - `frontend/src/App.jsx` - Add double-click handler to lane content areas
@@ -57,6 +81,11 @@ Enhance the existing lane content area with double-click event handling. Leverag
 **Reference files:**
 
 - `frontend/src/components/lane-name.jsx` - Reference for existing task/note creation button
+
+### CSS classes
+
+- `.lane__content:hover` - Subtle visual hint for double-click availability
+- `.lane__content:active` - Feedback during double-click interaction
 
 ### Component graph
 
@@ -82,7 +111,6 @@ graph TD
 - Prevent double-click when clicking on cards or when drag is disabled
 
 ```javascript
-// Within the lane rendering in App.jsx
 <DragAndDrop.Container
   class="lane__content"
   group="cards"
@@ -100,17 +128,14 @@ graph TD
 
 ```javascript
 function handleLaneDoubleClick(event, lane) {
-  // Prevent if clicking on a card element
   if (event.target.closest(".card")) {
     return;
   }
 
-  // Prevent if drag is disabled (sorted view)
   if (disableCardsDrag()) {
     return;
   }
 
-  // Create new card using existing function
   createNewCard(lane);
 }
 ```

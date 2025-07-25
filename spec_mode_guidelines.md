@@ -58,7 +58,7 @@ Create clear, unambiguous requirements with:
 - **Out of scope:** What this feature will _not_ do
 - **Stories:** User stories with acceptance criteria
   - **User story:** "AS A [role], I WANT [feature], SO THAT [benefit]"
-  - **Acceptance criteria:** EARS format: "WHEN [trigger], THEN the system SHALL [action]"
+  - **Acceptance criteria:** EARS format: "WHEN [trigger], THEN [system] SHALL [action]"
 
 **Example story format:**
 
@@ -67,8 +67,12 @@ Create clear, unambiguous requirements with:
 
 **Story:** AS a player, I WANT to manage my inventory, SO THAT I can use items.
 
-- 1.1. WHEN the player opens the inventory, THEN the system SHALL display all items
-- 1.2. WHEN the inventory is full, IF the player tries to pick up an item, THEN the system SHALL show an "Inventory Full" message
+- 1.1.
+  - _WHEN:_ Player opens inventory
+  - _THEN:_ UI _shall_ display all items
+- 1.2.
+  - _WHEN:_ Player tries to pick up item when inventory is full
+  - _THEN:_ UI _shall_ show "Inventory Full" message
 ```
 
 **Example component format:**
