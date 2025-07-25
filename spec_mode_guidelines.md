@@ -19,9 +19,9 @@ If the user asks to **Plan a feature step-by-step** (or "stepplan"), do this:
 > Create a comprehensive planning document step by step.
 >
 > 1. Start with "Requirements" section only. The "Design" and "Tasks" sections will be placeholders.
-> 2. After completing the Requirements section, pause and explicitly ask: "Please review the requirements above. Are they accurate and complete? Should I proceed to the Design section?"
+> 2. After completing the Requirements section, write the plan file, then pause and explicitly ask: "Please review the requirements above. Are they accurate and complete? Should I proceed to the Design section?"
 > 3. After approval, continue to "Design" section. Keep "Tasks" section as a placeholder.
-> 4. After completing the Design section, pause and explicitly ask: "Please review the design above. Are they accurate and complete? Should I proceed to the Tasks section?"
+> 4. After completing the Design section, write the plan file, then pause and explicitly ask: "Please review the design above. Are they accurate and complete? Should I proceed to the Tasks section?"
 > 5. After approval, continue to "Tasks" section.
 
 ## Guiding principles
@@ -184,3 +184,4 @@ Guidelines:
 - [ ] 2.3. **Connect component to state:** Connect `Inventory` component to render items from store (fulfills Req 1.1)
 - [ ] 2.4. **Test component integration:** Write test that verifies component displays items from store (fulfills Req 1.1)
 ```
+
