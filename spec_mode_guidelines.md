@@ -153,6 +153,17 @@ Create detailed implementation plan with:
 
 - Numbered checklist of coding tasks, grouped by feature or component
 
+If some tasks can be parallelised, split the tasks into 2 phases:
+
+1. **Parallel phase**
+   - Add description: "These are tasks that can be done in parallel by subagents"
+   - Group tasks to be accomplished by up to 4 concurrent subagents
+   - Each subagent is independent of each other. They do not share results or state with each other
+   - Each task group should be modifying files that are not the same files
+2. **Final phase**
+   - Add description: "These are tasks that should be done after the parallel phase"
+   - Any tasks that need to be done after the parallel phase
+
 Guidelines:
 
 - Use clear, human-readable titles in bold
@@ -184,4 +195,3 @@ Guidelines:
 - [ ] 2.3. **Connect component to state:** Connect `Inventory` component to render items from store (fulfills Req 1.1)
 - [ ] 2.4. **Test component integration:** Write test that verifies component displays items from store (fulfills Req 1.1)
 ```
-
