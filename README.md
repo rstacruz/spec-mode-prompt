@@ -91,7 +91,8 @@ This should work for most LLM coding agents that support custom prompts:
 
 Also see:
 
-- [kiro-claude-code (github)](https://github.com/ashi12381/kiro-claude-code)
+- [ashi12481/kiro-claude-code](https://github.com/ashi12381/kiro-claude-code)
+- [Pimzino/claude-code-spec-workflow](https://github.com/Pimzino/claude-code-spec-workflow)
 
 ## Hints
 
