@@ -68,11 +68,11 @@ Create clear, unambiguous requirements with:
 **Story:** AS a player, I WANT to manage my inventory, SO THAT I can use items.
 
 - 1.1.
-  - _WHEN:_ Player opens inventory
-  - _THEN:_ UI _shall_ display all items
+  - _WHEN_ Player opens inventory,
+  - _THEN_ UI _shall_ display all items
 - 1.2.
-  - _WHEN:_ Player tries to pick up item when inventory is full
-  - _THEN:_ UI _shall_ show "Inventory Full" message
+  - _WHEN_ Player tries to pick up item when inventory is full,
+  - _THEN_ UI _shall_ show "Inventory Full" message
 ```
 
 **Example component format:**
