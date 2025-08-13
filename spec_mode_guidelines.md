@@ -67,12 +67,12 @@ Create clear, unambiguous requirements with:
 
 **Story:** AS a player, I WANT to manage my inventory, SO THAT I can use items.
 
-- 1.1.
+- **1.1. Display inventory items**
   - _WHEN_ Player opens inventory,
-  - _THEN_ UI _shall_ display all items
-- 1.2.
+  - _THEN_ UI _SHALL_ display all items
+- **1.2. Handle full inventories**
   - _WHEN_ Player tries to pick up item when inventory is full,
-  - _THEN_ UI _shall_ show "Inventory Full" message
+  - _THEN_ UI _SHALL_ show "Inventory Full" message
 ```
 
 **Example component format:**
@@ -95,12 +95,21 @@ export function WordLink(props: WordLinkProps): JSX.Element;
 
 **Example testing strategy format:**
 
+````markdown
+**Running tests:**
+
+- `cd packages/words && pnpm test WordLinks.test.tsx` - Runs a specific test file in the "words" package
+- `cd packages/ui && pnpm test Button.test.tsx` - Runs a specific test file in the "ui" package
+
+**Test files to create/update:**
+
 ```tsx
 describe("WordLinks", () => {
   test("renders word categories for supported languages");
   test("handles empty word data gracefully");
 });
 ```
+````
 
 ### Design
 
@@ -113,7 +122,7 @@ Create technical design with:
 - **CSS classes:** Styling and layout classes needed
 - **Components:** Key components with responsibilities and signatures in code blocks
 - **Error handling:** Error management approach
-- **Testing strategy:** Unit, integration, and other tests needed
+- **Testing strategy:** Unit, integration, and other tests needed. Include test commands to run individual test files
 
 Skip sections that don't apply to your feature (e.g., if no data model is needed, skip that section; if no CSS classes are required, skip that section).
 
