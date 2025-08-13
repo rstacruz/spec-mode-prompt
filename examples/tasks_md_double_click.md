@@ -91,7 +91,7 @@ Enhance the existing lane content area with double-click event handling. Leverag
 
 ```mermaid
 graph TD
-    A[App.jsx] --> B(DragAndDrop.Container lane__content);
+    A[App.jsx] --> B("DragAndDrop.Container lane__content");
     B --> C[Double-click handler];
     C --> D(createNewCard function);
     D --> E[New card creation];
