@@ -37,10 +37,9 @@ This should work for most LLM coding agents that support custom prompts:
    "Don't create a separate Message component, just use a div."
    ```
 
-4. Task mode: when you're happy with the spec, start a new chat and use this prompt:
+4. When you're happy with the spec, start an agent chat to do the tasks in the spec file.
 
    ```markdown
-   Read the guidelines in @notes/task_mode_guidelines.md.
    Do all the tasks in @notes/specs/my-feature.spec.md.
    ```
 
@@ -48,19 +47,17 @@ This should work for most LLM coding agents that support custom prompts:
 
 [sst/opencode](https://github.com/sst/opencode) instructions:
 
-1. Save [`spec_mode_guidelines.md`](spec_mode_guidelines.md) into `~/.config/opencode/spec-mode.md`.
-2. Save [`task_mode_guidelines.md`](task_mode_guidelines.md) into `~/.config/opencode/task-mode.md`.
-3. Update `~/.config/opencode/config.json` with the config below.
-4. In OpenCode, press <kdb>Tab</kdb> a few times to switch to Task mode.
+1. Create `~/.config/opencode/agent/spec-mode.md` with the contents below. Replace _(paste here)_ with the contents of [`spec_mode_guidelines.md`](spec_mode_guidelines.md).
+2. In OpenCode, press <kdb>ctrl-x a</kdb> to switch modes.
 
 ```json
-{
-  "$schema": "https://opencode.ai/config.json",
-  "mode": {
-    "spec": { "prompt": "{file:./spec-mode.md}" },
-    "task": { "prompt": "{file:./task-mode.md}" }
-  }
-}
+---
+mode: primary
+description: >-
+  Plan a new feature in a software project. Create a comprehensive specification document with requirements, design, and tasks.
+---
+
+(paste here)
 ```
 
 ### Claude Code
@@ -68,14 +65,12 @@ This should work for most LLM coding agents that support custom prompts:
 [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) instructions:
 
 1. Save [`spec_mode_guidelines.md`](spec_mode_guidelines.md) into `~/.claude/commands/spec-mode.md`.
-2. Save [`task_mode_guidelines.md`](task_mode_guidelines.md) into `~/.claude/commands/task-mode.md`.
-3. Use `/spec-mode plan this feature: <describe your plan here>` in Claude Code.
+2. Use `/spec-mode plan this feature: <describe your plan here>` in Claude Code.
 
 ### Zed
 
 1. Save [`spec_mode_guidelines.md`](spec_mode_guidelines.md) into Zed's [Rules Library](https://zed.dev/docs/ai/rules#rules-library).
-2. Save [`task_mode_guidelines.md`](taskc_mode_guidelines.md) into Zed's [Rules Library](https://zed.dev/docs/ai/rules#rules-library).
-3. Include it in your prompt with `@rule`.
+2. Include it in your prompt with `@rule`.
 
 ### Visual Studio Code
 
@@ -85,7 +80,6 @@ This should work for most LLM coding agents that support custom prompts:
 4. Paste the contents of [`spec_mode_guidelines.md`](spec_mode_guidelines.md) into the new file and save it
 5. Click `Configure Tools…` and select all tools
 6. After saving, it can now be activated by changing modes (eg, Ask, Edit, Agent, Spec)
-7. Do the same for [`task_mode_guidelines.md`](task_mode_guidelines.md)
 
 ## Prior art
 
