@@ -75,42 +75,6 @@ Create clear, unambiguous requirements with:
   - _THEN_ UI _SHALL_ show "Inventory Full" message
 ```
 
-**Example component format:**
-
-````markdown
-#### WordLink component
-
-- **Location**: `src/components/WordLink.tsx`
-- Renders a clickable link for a word with hover states and accessibility.
-
-```typescript
-interface WordLinkProps {
-  word: string;
-  langId: LanguageId;
-  className?: string;
-}
-export function WordLink(props: WordLinkProps): JSX.Element;
-```
-````
-
-**Example testing strategy format:**
-
-````markdown
-**Running tests:**
-
-- `cd packages/words && pnpm test WordLinks.test.tsx` - Runs a specific test file in the "words" package
-- `cd packages/ui && pnpm test Button.test.tsx` - Runs a specific test file in the "ui" package
-
-**Test files to create/update:**
-
-```tsx
-describe("WordLinks", () => {
-  test("renders word categories for supported languages");
-  test("handles empty word data gracefully");
-});
-```
-````
-
 ### Design
 
 Create technical design with:
@@ -148,21 +112,21 @@ export function WordLink(props: WordLinkProps): JSX.Element;
 
 **Example testing strategy format:**
 
+````markdown
+**Running tests:**
+
+- `cd packages/words && pnpm test WordLinks.test.tsx` - Runs a specific test file in the "words" package
+- `cd packages/ui && pnpm test Button.test.tsx` - Runs a specific test file in the "ui" package
+
+**Test files to create/update:**
+
 ```tsx
-// WordLinks.test.tsx
 describe("WordLinks", () => {
   test("renders word categories for supported languages");
-  test("returns null for unsupported languages");
   test("handles empty word data gracefully");
 });
-
-// WordCategory.test.tsx
-describe("WordCategory", () => {
-  test("displays all words in category");
-  test("renders category header correctly");
-  test("applies proper styling and layout");
-});
 ```
+````
 
 ### Tasks
 
