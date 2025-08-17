@@ -50,7 +50,7 @@ This should work for most LLM coding agents that support custom prompts:
 1. Create `~/.config/opencode/agent/spec-mode.md` with the contents below. Replace _(paste here)_ with the contents of [`agents/spec-mode.md`](agents/spec-mode.md).
 2. In OpenCode, press <kdb>ctrl-x a</kdb> to switch modes.
 
-```json
+```
 ---
 mode: primary
 description: >-
