@@ -16,11 +16,11 @@ Spec mode is one way to do this. It will ask the agent to do research to plan an
 
 This should work for most LLM coding agents that support custom prompts:
 
-1. Copy [`spec_mode_guidelines.md`](spec_mode_guidelines.md) and [`task_mode_guidelines.md`](task_mode_guidelines.md) into your project's _notes/_ folder.
+1. Copy [`agents/spec-mode.md`](agents/spec-mode.md) and [`task_mode_guidelines.md`](task_mode_guidelines.md) into your project's _notes/_ folder.
 2. Spec mode: Use your preferred LLM coding agent (Gemini, Claude, Copilot, etc.) to use this prompt:
 
    ```markdown
-   Read the guidelines in @notes/spec_mode_guidelines.md.
+   Read the guidelines in @notes/agents/spec-mode.md.
    Plan for this feature:
 
    <describe your feature here>
@@ -47,7 +47,7 @@ This should work for most LLM coding agents that support custom prompts:
 
 [sst/opencode](https://github.com/sst/opencode) instructions:
 
-1. Create `~/.config/opencode/agent/spec-mode.md` with the contents below. Replace _(paste here)_ with the contents of [`spec_mode_guidelines.md`](spec_mode_guidelines.md).
+1. Create `~/.config/opencode/agent/spec-mode.md` with the contents below. Replace _(paste here)_ with the contents of [`agents/spec-mode.md`](agents/spec-mode.md).
 2. In OpenCode, press <kdb>ctrl-x a</kdb> to switch modes.
 
 ```json
@@ -64,12 +64,12 @@ description: >-
 
 [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) instructions:
 
-1. Save [`spec_mode_guidelines.md`](spec_mode_guidelines.md) into `~/.claude/commands/spec-mode.md`.
+1. Save [`agents/spec-mode.md`](agents/spec-mode.md) into `~/.claude/commands/spec-mode.md`.
 2. Use `/spec-mode plan this feature: <describe your plan here>` in Claude Code.
 
 ### Zed
 
-1. Save [`spec_mode_guidelines.md`](spec_mode_guidelines.md) into Zed's [Rules Library](https://zed.dev/docs/ai/rules#rules-library).
+1. Save [`agents/spec-mode.md`](agents/spec-mode.md) into Zed's [Rules Library](https://zed.dev/docs/ai/rules#rules-library).
 2. Include it in your prompt with `@rule`.
 
 ### Visual Studio Code
@@ -77,7 +77,7 @@ description: >-
 1. Open the command palette (<kbd>Ctrl-Shift-P</kbd> or <kbd>Cmd-Shift-P</kbd>) and `Chat: New Mode File…`
 2. Choose `User Data Folder`
 3. Give it a name like `"Spec"`
-4. Paste the contents of [`spec_mode_guidelines.md`](spec_mode_guidelines.md) into the new file and save it
+4. Paste the contents of [`agents/spec-mode.md`](agents/spec-mode.md) into the new file and save it
 5. Click `Configure Tools…` and select all tools
 6. After saving, it can now be activated by changing modes (eg, Ask, Edit, Agent, Spec)
 
