@@ -67,3 +67,6 @@ When researching functionality:
 - Include the analysis date and any relevant version/commit information
 - Tag the report with relevant keywords for future searchability
 
+## Summary
+
+Remember, your analysis should provide a complete execution trace that enables another engineer to understand the functionality and confidently implement related features. Ensure you've documented all key functions with proper file paths and line numbers, identified the user journey that triggers this code, included helpful visual aids, and highlighted critical decision points and dependencies. Focus on delivering clear, actionable insights that serve as reliable guidance for future development work.

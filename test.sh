@@ -1,9 +1,11 @@
 #!/usr/bin/bash
 set -euo pipefail
 
+file="${1:-agents/spec-mode.md}"
+
 PROMPT="
 Consult @test.md.
-Evaluate the prompt in @agent/spec-mode.md.
+Evaluate the prompt in @$file.
 "
 
 if [[ "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
@@ -17,7 +19,7 @@ if [[ "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
   exit 0
 fi
 
-MODE="${1:-oc-gpt4}"
+MODE="${2:-oc-gpt4}"
 
 case "$MODE" in
 "gemini:flash" | "g-flash")
