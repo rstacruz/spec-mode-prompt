@@ -3,7 +3,7 @@ set -euo pipefail
 
 PROMPT="
 Consult @test.md.
-Evaluate the prompts in @spec_mode_guidelines.md and @task_mode_guidelines.md.
+Evaluate the prompt in @agent/spec-mode.md.
 "
 
 if [[ "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
@@ -17,7 +17,7 @@ if [[ "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
   exit 0
 fi
 
-MODE="${1:-gemini:flash}"
+MODE="${1:-oc-gpt4}"
 
 case "$MODE" in
 "gemini:flash" | "g-flash")
