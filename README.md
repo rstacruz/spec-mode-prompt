@@ -16,7 +16,7 @@ Spec mode is one way to do this. It will ask the agent to do research to plan an
 
 This should work for most LLM coding agents that support custom prompts:
 
-1. Copy [`agents/spec-mode.md`](agents/spec-mode.md) and [`task_mode_guidelines.md`](task_mode_guidelines.md) into your project's _notes/_ folder.
+1. Copy [`agents/spec-mode.md`](agents/spec-mode.md) into your project's _notes/_ folder.
 2. Spec mode: Use your preferred LLM coding agent (Gemini, Claude, Copilot, etc.) to use this prompt:
 
    ```markdown
